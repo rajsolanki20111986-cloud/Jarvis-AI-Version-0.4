@@ -2,7 +2,7 @@ package com.vision.app
 
 import android.net.Uri
 import kotlinx.coroutines.Dispatchers
-import kiotlinx.coroutines.withContext
+import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
@@ -31,7 +31,7 @@ object GmailTool {
                     "?format=metadata&metadataHeaders=From&metadataHeaders=Subject&metadataHeaders=Date",
                 token
             ) ?: continue
-            out.append("- From: ").append(header(m, "From")
+            out.append("- From: ").append(header(m, "From"))
                 .append(" | Subject: ").append(header(m, "Subject"))
                 .append(" | ").append(header(m, "Date")).append('\n')
                 .append("  ").append(m.optString("snippet")).append('\n')
