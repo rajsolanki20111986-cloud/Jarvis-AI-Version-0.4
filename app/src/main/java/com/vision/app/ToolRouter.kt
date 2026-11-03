@@ -30,7 +30,10 @@ object ToolRouter {
     }
 
     fun declarations(): JSONArray = JSONArray().apply {
-        addAll(SystemPermissionTools.declarations())
+        val systemDeclarations = SystemPermissionTools.declarations()
+        for (i in 0 until systemDeclarations.length()) {
+            put(systemDeclarations.get(i))
+        }
         put(d("memory_list", "List all memory files: profile, facts, routines, projects and skills."))
         put(d("memory_read", "Read one memory file.", "path" to "e.g. profile.md or skills/whatsapp-reply.md"))
         put(d("memory_write", "Create or fully rewrite a memory file. Use it for a skill, a routine, a project or a fact he gave you.",
