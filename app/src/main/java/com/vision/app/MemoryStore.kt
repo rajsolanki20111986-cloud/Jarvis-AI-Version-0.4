@@ -56,7 +56,7 @@ object MemoryStore {
             if (content.length > MAX_FILE_CHARS) return "Refused: content is too long."
             f.parentFile?.mkdirs()
             if (append && f.exists() && f.length() > 0) f.appendText("\n" + content) else f.writeText(content)
-            return "Saved ${f.relativeTo(root).path}"
+            return "Saved " + "$" + "{f.relativeTo(root).path}"
         }
     }
 
