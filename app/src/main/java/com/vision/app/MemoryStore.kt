@@ -113,7 +113,7 @@ object MemoryStore {
         val sb = StringBuilder()
         sb.append("MEMORY: these files are what you already know about him. ")
         sb.append("When he tells you something lasting, save it with memory_append or memory_write. ")
-        sb.append("Files under skills/ are procedures he taught Vision; follow them.\n")
+        sb.append("Files under skills/ are procedures he taught you; follow them.\n")
         var budget = 16_000
         for (p in list()) {
             if (budget <= 0) break
